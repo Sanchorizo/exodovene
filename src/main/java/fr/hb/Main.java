@@ -10,26 +10,9 @@ public class Main {
         System.out.println(reverser("olleh"));
     }
 
-    public static int countWords(String s) {
 
-        int wordCount = 0;
-
-        boolean word = false;
-        int endOfLine = s.length() - 1;
-
-        for (int i = 0; i < s.length(); i++) {
-            if (Character.isLetter(s.charAt(i)) && i != endOfLine) {
-                word = true;
-
-            } else if (!Character.isLetter(s.charAt(i)) && word) {
-                wordCount++;
-                word = false;
-
-            } else if (Character.isLetter(s.charAt(i)) && i == endOfLine) {
-                wordCount++;
-            }
-        }
-        return wordCount;
+    public static int countWords(String sentence) {
+        return sentence.split("\\s").length;
     }
 
     public static String reverser(String string) {
