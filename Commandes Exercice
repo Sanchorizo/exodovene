@@ -1,0 +1,7 @@
+1. Commande Docker pour créer l'image à partir du Dockerfile :
+    docker build -t helloworld:latest .
+
+
+2. Commande Docker pour exécuter l'image Docker :
+    docker run -p 8080:8080 helloworld:latest
+
